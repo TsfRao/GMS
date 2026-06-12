@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GB Glacier DSS Demo Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial, sans-serif; margin:0; background:#f4f7fb; color:#1e293b}
+header{background:#0f3557;color:white;padding:24px}
+main{padding:20px;max-width:1200px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:white;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.kpi{font-size:28px;font-weight:bold;color:#0f3557}
+.btn{display:inline-block;background:#0f766e;color:white;text-decoration:none;padding:10px 12px;border-radius:8px;margin:4px 0}
+small{color:#64748b}
+table{width:100%;border-collapse:collapse;background:white}
+th,td{padding:10px;border-bottom:1px solid #e2e8f0;text-align:left}
+th{background:#dbeafe}
+.warning{background:#fff7ed;border-left:5px solid #f97316;padding:12px;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>Gilgit-Baltistan Glacier Monitoring DSS — Demo</h1>
+<p>One-page mock dashboard connecting satellite, GIS, SAR, climate, river-flow and community observation services.</p>
+</header>
+<main>
+<section class="grid">
+<div class="card"><small>Basin</small><div class="kpi">Hunza</div><p>Pilot area</p></div>
+<div class="card"><small>Status</small><div class="kpi">Watch</div><p>Demo score 62/100</p></div>
+<div class="card"><small>Snow-cover module</small><div class="kpi">NDSI</div><p>Landsat/Sentinel</p></div>
+<div class="card"><small>Decision output</small><div class="kpi">Scorecard</div><p>Policy-ready summary</p></div>
+</section>
+<h2>One-click service links</h2>
+<div class="grid">
+<div class="card"><h3>RGI/GLIMS</h3><p>Glacier outlines.</p><a class="btn" href="https://www.glims.org/RGI/" target="_blank">Open source</a></div>
+<div class="card"><h3>Google Earth Engine</h3><p>NDSI/NDWI time-series processing.</p><a class="btn" href="https://code.earthengine.google.com/" target="_blank">Open GEE</a></div>
+<div class="card"><h3>Copernicus Browser</h3><p>Sentinel-1 and Sentinel-2 search.</p><a class="btn" href="https://browser.dataspace.copernicus.eu/" target="_blank">Open Copernicus</a></div>
+<div class="card"><h3>ERA5-Land</h3><p>Temperature and precipitation context.</p><a class="btn" href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land" target="_blank">Open CDS</a></div>
+<div class="card"><h3>WAPDA River Flow</h3><p>Discharge/water flow context.</p><a class="btn" href="https://wapda.gov.pk/river-flow/" target="_blank">Open WAPDA</a></div>
+<div class="card"><h3>NDMA Advisories</h3><p>Official weather, GLOF and disaster advisories.</p><a class="btn" href="https://www.ndma.gov.pk/advisories" target="_blank">Open NDMA Advisories</a></div>
+<div class="card"><h3>NDMA SITREPs</h3><p>Official situation reports during disaster events.</p><a class="btn" href="https://www.ndma.gov.pk/sitreps" target="_blank">Open SITREPs</a></div>
+<div class="card"><h3>NDMA Projections & Impacts</h3><p>Impact projection and early-warning context.</p><a class="btn" href="https://www.ndma.gov.pk/projection-impact" target="_blank">Open Projections</a></div>
+<div class="card"><h3>KoboToolbox</h3><p>Community water problem reporting.</p><a class="btn" href="https://www.kobotoolbox.org/" target="_blank">Open Kobo</a></div>
+
+<div class="card"><h3>NASA Worldview</h3><p>Famous global satellite imagery viewer for quick visual comparison.</p><a class="btn" href="https://worldview.earthdata.nasa.gov/" target="_blank">Open Worldview</a></div>
+<div class="card"><h3>GLIMS Glacier Viewer</h3><p>Global glacier outline viewer for glacier inventory checking.</p><a class="btn" href="https://www.glims.org/maps/glims" target="_blank">Open GLIMS Viewer</a></div>
+<div class="card"><h3>WGMS Glacier Browser</h3><p>Global glacier change statistics: mass, length, area and events.</p><a class="btn" href="https://experience.arcgis.com/experience/836c66d14c8b410f940355056ddb1bf8" target="_blank">Open WGMS Browser</a></div>
+<div class="card"><h3>Copernicus Glacier Mass Change</h3><p>Global annual glacier mass-change dataset for comparison.</p><a class="btn" href="https://cds.climate.copernicus.eu/datasets/derived-gridded-glacier-mass-change?tab=overview" target="_blank">Open CDS Glacier Data</a></div>
+<div class="card"><h3>Copernicus GloFAS</h3><p>Global flood awareness and river-flood forecasting context.</p><a class="btn" href="https://global-flood.emergency.copernicus.eu/react/" target="_blank">Open GloFAS</a></div>
+<div class="card"><h3>Copernicus EMS Mapping</h3><p>Emergency mapping activations for response and recovery maps.</p><a class="btn" href="https://mapping.emergency.copernicus.eu/" target="_blank">Open EMS Mapping</a></div>
+<div class="card"><h3>Google Flood Hub</h3><p>AI river flood forecasts, water trends and inundation context.</p><a class="btn" href="https://sites.research.google/floods/" target="_blank">Open Flood Hub</a></div>
+</div>
+<h2>Demo basin scorecard</h2>
+<table>
+<tr><th>Indicator</th><th>Source</th><th>Status</th><th>Decision meaning</th></tr>
+<tr><td>Snow-cover area</td><td>Landsat/Sentinel NDSI</td><td>Watch</td><td>Seasonal melt/water availability needs checking</td></tr>
+<tr><td>Glacial lake area</td><td>Sentinel/Landsat NDWI</td><td>Stable/Watch</td><td>Keep lake expansion in secondary module</td></tr>
+<tr><td>Glacier velocity</td><td>Sentinel-1 SAR</td><td>Priority only</td><td>Run for selected dynamic glaciers</td></tr>
+<tr><td>River discharge</td><td>WAPDA / PMD-FFD</td><td>Normal</td><td>Compare glacier signal with flow records</td></tr>
+<tr><td>Community reports</td><td>Kobo / ODK</td><td>4 reports</td><td>Check irrigation channel and local water problems</td></tr>
+<tr><td>Official disaster advisory</td><td>NDMA Advisories / SITREPs</td><td>Check required</td><td>Compare basin indicators with official disaster-management guidance</td></tr>
+</table>
+<div class="warning">
+<b>Demo note:</b> This is a presentation mockup. The Streamlit app in this package gives a slightly more functional version with sample data and simulated backend job logs.
+</div>
+</main>
+</body>
+</html>
